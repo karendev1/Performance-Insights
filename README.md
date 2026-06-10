@@ -1,73 +1,248 @@
-# React + TypeScript + Vite
+# Performance Insights
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application that analyzes website performance and provides detailed insights into performance, accessibility, SEO, and best practices.
 
-Currently, two official plugins are available:
+## 🚀 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Performance Insights allows users to submit a website URL and receive a comprehensive performance report, helping developers identify optimization opportunities and improve the overall user experience.
 
-## React Compiler
+This project also serves as a showcase of modern Front-End architecture, scalability, maintainability, and development best practices.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### MVP
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Analyze a website URL
+* Display performance metrics
+* Display accessibility metrics
+* Display SEO metrics
+* Display best practices metrics
+* Highlight optimization opportunities
+* Visualize scores with intuitive UI components
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Future Enhancements
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Analysis history
+* Report comparison
+* Report export (PDF)
+* Analytics dashboard
+* Report sharing
+* User authentication
+
+---
+
+## 🛠️ Tech Stack
+
+### Front-End
+
+* React
+* TypeScript
+* Vite
+* React Router
+* TanStack Query
+* Tailwind CSS
+* Shadcn/UI
+* Axios
+
+### Code Quality
+
+* ESLint
+* Prettier
+* Husky
+* Commitlint
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+├── app/
+│   └── providers/
+│
+├── pages/
+│
+├── features/
+│
+├── routes/
+│
+├── shared/
+│   ├── components/
+│   ├── hooks/
+│   ├── layouts/
+│   ├── services/
+│   ├── types/
+│   └── utils/
+│
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Folder Responsibilities
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* `pages`: application pages and route entry points.
+* `features`: business features and domain logic.
+* `shared`: reusable components, hooks, utilities, and services.
+* `routes`: routing configuration.
+* `app`: global providers and application setup.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ⚙️ Getting Started
+
+### Clone the repository
+
+```bash
+git clone <repository-url>
 ```
+
+### Navigate to the project directory
+
+```bash
+cd performance-insights
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 📜 Available Scripts
+
+### Start development server
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+### Run ESLint
+
+```bash
+npm run lint
+```
+
+### Fix ESLint issues
+
+```bash
+npm run lint:fix
+```
+
+### Format code
+
+```bash
+npm run format
+```
+
+### Check formatting
+
+```bash
+npm run format:check
+```
+
+---
+
+## 🧾 Commit Convention
+
+This project follows the Conventional Commits specification.
+
+Examples:
+
+```text
+feat: add URL analysis form
+fix: handle API timeout
+docs: update README
+refactor: extract audit service
+chore: configure husky
+```
+
+---
+
+## 🏗️ Architecture
+
+The project follows a feature-oriented architecture focused on scalability and maintainability.
+
+### Principles
+
+* Separation of Concerns
+* Reusable Components
+* Feature-Based Organization
+* Clean Code
+* SOLID Principles
+* DRY
+* KISS
+
+---
+
+## 🎯 Roadmap
+
+### Phase 1 — Foundation
+
+* [x] React + TypeScript
+* [x] ESLint
+* [x] Prettier
+* [x] Path Aliases
+* [x] Tailwind CSS
+* [x] Shadcn/UI
+* [x] React Router
+* [x] TanStack Query
+* [x] Commitlint + Husky
+
+### Phase 2 — MVP
+
+* [ ] Landing page
+* [ ] URL analysis form
+* [ ] API integration
+* [ ] Performance report
+* [ ] Error handling
+* [ ] Loading states
+
+### Phase 3 — Enhancements
+
+* [ ] Analysis history
+* [ ] Report comparison
+* [ ] PDF export
+* [ ] Analytics dashboard
+
+---
+
+## 👩‍💻 Author
+
+Karen Santana
+
+Software Engineer | Front-End Developer
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
